@@ -8,18 +8,14 @@ const API_CURRENCIES = 'http://data.fixer.io/api/latest?access_key=f68b13604ac8e
 const API_COUNTRIES = 'https://restcountries.eu/rest/v2/currency/cop';
 
 // 1st function - getExchangeRate
-const getExchangeRate = (fromCurrency, toCurrency) => {
-    axios.get(API_CURRENCIES)
-        .then(response => {
-            const rates = response.data.rates;
-            const euro = 1 / rates[fromCurrency];
-            const exchangeRate = euro * rates[toCurrency];
+const getExchangeRate = async (fromCurrency, toCurrency) => {
+    const response = await axios.get(API_CURRENCIES);
 
-            console.log(exchangeRate);
-        })
-        .catch(error => {
-            throw new Error(error);
-        });
+    const rates = response.data.rates;
+    const euro = 1 / rates[fromCurrency];
+    const exchangeRate = euro * rates[toCurrency];
+
+    console.log(exchangeRate);
 };
 
 // 2nd function - getCountries
