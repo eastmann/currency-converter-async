@@ -1,0 +1,23 @@
+{
+  "name": "currency-converter-async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eastmann/currency-converter-async.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eastmann/currency-converter-async/issues"
+  },
+  "homepage": "https://github.com/eastmann/currency-converter-async#readme",
+  "devDependencies": {
+    "axios": "^0.21.0"
+  }
+}
